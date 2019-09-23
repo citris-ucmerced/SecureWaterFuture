@@ -2487,18 +2487,18 @@ input, select, textarea {
 
 		#banner .content {
 			position: relative;
-			background-color: rgba(255, 255, 255, 0);
+			background-color: rgba(21, 28, 23, 0.65);
 			background-image: url("images/overlay.png"), url("images/highlight.png");
 			background-position: top left, center center;
 			background-size: auto, 100% 250%;
 			background-repeat: repeat, no-repeat;
 			text-align: center;
 			margin: 0;
-			padding: 4em 0 3.5em 0;
+			padding: 2em 0 1.5em 0;
 		}
 
 			#banner .content h2 {
-				color: #fff;
+				color: #eee;
 				font-size: 2.75em;
 				margin: 0 0 0.5em 0;
 			}
@@ -2508,7 +2508,7 @@ input, select, textarea {
 				font-family: 'Open Sans Condensed', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
-				color: #fff;
+				color: #ccc;
 				font-size: 1.35em;
 				margin: 0 0 1.25em 0;
 			}
@@ -2518,20 +2518,19 @@ input, select, textarea {
 				-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
 				-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
 				transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				color: #fff;
+				color: #ccc;
 				background: transparent !important;
-				border: solid 4px #ffffff;
-				border-color: rgb(255, 255, 255);
+				border: solid 4px #575d59;
+				border-color: rgba(87, 93, 89, 0.35);
 				font-size: 1.5em;
 			}
 
 				#banner .content .button:hover {
 					color: #fff;
-					border-color: rgba(255, 255, 255, 0.75);
+					border-color: rgba(87, 93, 89, 0.75);
 				}
 
 				#banner .content .button:active {
-					color: #fff;
 					border-color: #fff;
 				}
 

@@ -1790,7 +1790,7 @@ input, select, textarea {
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-		background: #b1ddab;
+		background: #3671c9;
 		color: #fff;
 		border: 0;
 		line-height: 1em;
@@ -1812,7 +1812,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #c1edbb;
+			background: #9bd493;
 		}
 
 		input[type="button"]:active,
@@ -2218,6 +2218,12 @@ input, select, textarea {
 		margin: 0 0 0.25em 0;
 	}
 
+	.box.post h4 {
+		font-size: 250%;
+		margin: 0 0 0.25em 0;
+		text-align: center;
+	}
+
 	.box.post header > p {
 		font-size: 1.65em;
 		margin: 0 0 0.5em 0;
@@ -2244,6 +2250,15 @@ input, select, textarea {
 	.box.page-content h2 {
 		font-size: 3em;
 		margin: 0 0 0.5em 0;
+	}
+
+	h2.major2 {
+		text-align: center;
+		position: relative;
+		border-top: solid 5px #e7eae8;
+		padding: 10px;
+		border-bottom: solid 5px #e7eae8;
+		font-size: 300%;
 	}
 
 	.box.page-content header > p {
@@ -2354,6 +2369,7 @@ input, select, textarea {
 		text-align: center;
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
+		font-size: large;
 		text-transform: uppercase;
 		cursor: default;
 	}
@@ -2476,7 +2492,7 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banners/plant.jpg");
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;

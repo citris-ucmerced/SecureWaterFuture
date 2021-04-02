@@ -1,6 +1,6 @@
-banner
-atd-banner
-aviation-banner
-campus-banner
-fit-banner
-mac-banner
+almonds-in-bloom;SWIM;;
+reservoir;SWIM;;
+drought-and-ag;SWIM;;
+alfalfa-field;SWIM;;
+sierra-Nevada-moving-up;SWIM;;
+snowline-sierra-nevada-moving-up;SWIM;;

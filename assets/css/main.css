@@ -2490,64 +2490,72 @@ input, select, textarea {
 
 /* Banner */
 
-	#banner {
-		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banners/plant.jpg");
-		background-position: top left, top left, center center;
-		background-repeat: repeat, repeat, no-repeat;
-		background-size: auto, auto, cover;
-		z-index: 1;
-		padding: 11em 0;
+#banner-wrapper {
+	position: relative;
+	background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+	background-position: top left, top left, center center;
+	background-repeat: repeat, repeat, no-repeat;
+	background-size: auto, auto, cover;
+	z-index: 1;
+	padding: 11em 0;
+}
+
+#main-wrapper {
+	background: #fff;
+	border-top: solid 5px #4D82B7;
+	border-bottom: solid 5px #c1cac5;
+}
+
+/* Banner */
+
+#banner {
+	position: relative;
+	background-color: rgba(21, 28, 23, 0.7);
+	background-image: url("images/overlay.png"), url("images/highlight.png");
+	background-position: top left, center center;
+	background-size: auto, 100% 250%;
+	background-repeat: repeat, no-repeat;
+	text-align: center;
+	padding: 1em 0;
+	margin: 0;
+}
+
+	#banner h2 {
+		color: #fff;
+		font-size: 2.75em;
+	}
+	
+	#banner p {
+		display: block;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #575d59;
 	}
 
-		#banner .content {
-			position: relative;
-			background-color: rgba(21, 28, 23, 0.65);
-			background-image: url("images/overlay.png"), url("images/highlight.png");
-			background-position: top left, center center;
-			background-size: auto, 100% 250%;
-			background-repeat: repeat, no-repeat;
-			text-align: center;
-			margin: 0;
-			padding: 2em 0 1.5em 0;
+	#banner .button {
+		-moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
+		-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
+		-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
+		transition: border-color .2s ease-in-out, color .2s ease-in-out;
+		color: #dadada;
+		background: transparent !important;
+		border: solid 4px #dadada;
+		border-color: rgba(255, 255, 255);
+		border-radius: 16px;
+		font-size: 1.5em;
+	}
+
+		#banner .button:hover {
+			color: #ffffff;
+			border-color: rgba(77,130,183, 1);
 		}
 
-			#banner .content h2 {
-				color: #eee;
-				font-size: 2.75em;
-				margin: 0 0 0.5em 0;
-			}
+		#banner .button:active {
+			color: #4D82B7;
+			border-color: #ffffff;
+		}
 
-			#banner .content p {
-				display: block;
-				font-family: 'Open Sans Condensed', sans-serif;
-				font-weight: 700;
-				text-transform: uppercase;
-				color: #ccc;
-				font-size: 1.35em;
-				margin: 0 0 1.25em 0;
-			}
-
-			#banner .content .button {
-				-moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				color: #ccc;
-				background: transparent !important;
-				border: solid 4px #575d59;
-				border-color: rgba(87, 93, 89, 0.35);
-				font-size: 1.5em;
-			}
-
-				#banner .content .button:hover {
-					color: #fff;
-					border-color: rgba(87, 93, 89, 0.75);
-				}
-
-				#banner .content .button:active {
-					border-color: #fff;
-				}
 
 /* Main */
 

@@ -2,5 +2,5 @@ almonds-in-bloom;SWIM;;
 reservoir;SWIM;;
 drought-and-ag;SWIM;;
 alfalfa-field;SWIM;;
-sierra-Nevada-moving-up;SWIM;;
+sierra-Nevada-snow;SWIM;;
 snowline-sierra-nevada-moving-up;SWIM;;

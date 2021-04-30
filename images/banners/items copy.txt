@@ -4,3 +4,4 @@ aviation-banner;SWIM;;
 campus-banner;SWIM;;
 fit-banner;SWIM;;
 mac-banner;SWIM;;
+snowline-sierra-nevada-moving-up;SWIM;;

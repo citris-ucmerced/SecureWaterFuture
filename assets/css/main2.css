@@ -2211,12 +2211,18 @@ input, select, textarea {
 
 	.box.post header {
 		margin: 0 0 2.5em 0;
+		
 	}
 
-	/* .box.post p {
+	.box.post p{
 		width: 75%;
 		padding-left:25%;
-	} */
+	}
+
+	.box.post ul{
+		width: 75%;
+		padding-left:25%;
+	}
 
 	.box.post h3 {
 		font-size: 3em;

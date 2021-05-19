@@ -2215,13 +2215,13 @@ input, select, textarea {
 	}
 
 	.box.post p{
-		width: 75%;
-		padding-left:25%;
+		width: 90%;
+		padding-left:10%;
 	}
 
 	.box.post ul{
-		width: 75%;
-		padding-left:25%;
+		width: 90%;
+		padding-left:10%;
 	}
 
 	.box.post h3 {

@@ -196,7 +196,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 6em;
+		margin-bottom: 3.5em;
 	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
@@ -2213,10 +2213,9 @@ input, select, textarea {
 		margin: 0 0 2.5em 0;
 	}
 
-	/* .box.post p {
-		width: 75%;
-		padding-left:25%;
-	} */
+	.box.post p {
+		margin: 1em;
+	}
 
 	.box.post h3 {
 		font-size: 3em;
@@ -2254,7 +2253,6 @@ input, select, textarea {
 
 	.box.page-content h2 {
 		font-size: 3em;
-		margin: 0 0 0.5em 0;
 	}
 
 	h2.major2 {

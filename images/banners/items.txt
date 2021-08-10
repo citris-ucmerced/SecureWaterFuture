@@ -1,6 +1,5 @@
-almonds-in-bloom;SWIM;;
+utah;SWIM;;
+cows;SWIM;;
+almonds-in-bloom-trim;SWIM;;
 apple;SWIM;;
-reservoir;SWIM;;
-drought-and-ag;SWIM;;
 alfalfa-field;SWIM;;
-sierra-Nevada-snow;SWIM;;

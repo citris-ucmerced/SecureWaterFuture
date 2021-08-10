@@ -2495,12 +2495,13 @@ input, select, textarea {
 
 #banner-wrapper {
 	position: relative;
+	background-color: white;
 	background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
 	background-position: center center, center center, center center;
-	background-repeat: repeat, repeat, no-repeat;
-	background-size: auto, auto, cover;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-size: auto, auto, 100%;
 	z-index: 1;
-	padding: 11em 0;
+	padding: 12em 0;
 }
 
 #main-wrapper {

@@ -1776,7 +1776,17 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
-
+			
+			img.photo {
+				width: 210px;
+				margin-left: 10px;
+				margin-bottom: 10px;
+				border: 1px solid #666;
+			}
+#img-wrapped{
+	float: left;
+	margin: 0 20px 10px 10px;
+}
 /* Button */
 
 	input[type="button"],

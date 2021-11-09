@@ -106,13 +106,15 @@
                                     "</h3>" +
                                     data[i].DATE +
                                     "</header>" +
+                                    (((data[i].ID).toString() === '') ? '' :
                                     '<a href="' +
                                     data[i].LINK +
                                     '" class="image featured" target=_blank>' +
                                     '<img src="images/news/' +
                                     data[i].ID +
                                     '.jpg" alt="" />' +
-                                    "</a>" +
+                                    "</a>")
+                                     +
                                     "<p>" +
                                     data[i].DESCRIPTION +
                                     (((data[i].LINK).toString() === 'NO_BUTTON') ? '' : '<center> <a class="button" href="' + data[i].LINK + '" target=_blank>'+ data[i].BUTTON_TEXT +'</a> ') +

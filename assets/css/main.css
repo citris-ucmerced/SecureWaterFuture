@@ -2202,7 +2202,7 @@ input, select, textarea {
 /* Box */
 
 	.box.highlight {
-		text-align: center;
+		text-align: left;
 	}
 
 		.box.highlight h2 {
@@ -2223,9 +2223,9 @@ input, select, textarea {
 		margin: 0 0 2.5em 0;
 	}
 
-	.box.post p {
+	/* .box.post p {
 		margin: 1em;
-	}
+	} */
 
 	.box.post h3 {
 		font-size: 3em;

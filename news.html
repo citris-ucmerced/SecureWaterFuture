@@ -3,10 +3,19 @@
 
 <head>
     <title>SWF</title>
-	<link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L9XEBTBVZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4L9XEBTBVZ');
+    </script>
 </head>
 
 <body class="homepage is-preload">
@@ -16,7 +25,7 @@
             <div class="logo container">
                 <div>
                     <h2><a href="index.html" id="logo"></a>Recent News</h2>
-                    
+
                 </div>
             </div>
         </header>
@@ -24,9 +33,9 @@
             <ul>
                 <li><a href="index">Home</a></li>
                 <li><a href="people">People</a></li>
+				<li> <a href="research">Research</a> </li>
                 <li><a href="news">News</a></li>
-				<li> <a href="survey">Survey</a> </li>
-
+                <li> <a href="survey">Survey</a> </li>
                 <!-- <li> <a href="partners">Partners</a> </li> -->
             </ul>
         </nav>
@@ -56,18 +65,18 @@
                 <div class="col-12">
                     <section id="contact">
                         <h2 class="major"><span>Contact us</span></h2>
-						<p>
-							PI: Joshua Viers <br>
-							<a href="mailto::citris@ucmerced.edu">citris@ucmerced.edu</a>
-							<br>
-							University of California, Merced<br>
-						</p>
                         <p>
-							Program Coordinator: Sarah Naumes <br>
-							<a href="mailto::snaumes@ucmerced.edu">snaumes@ucmerced.edu</a>
-							<br>
-							University of California, Merced<br>
-						</p>
+                            PI: Joshua Viers <br>
+                            <a href="mailto::citris@ucmerced.edu">citris@ucmerced.edu</a>
+                            <br>
+                            University of California, Merced<br>
+                        </p>
+                        <p>
+                            Program Coordinator: Sarah Naumes <br>
+                            <a href="mailto::snaumes@ucmerced.edu">snaumes@ucmerced.edu</a>
+                            <br>
+                            University of California, Merced<br>
+                        </p>
                     </section>
                 </div>
             </div>
@@ -115,17 +124,17 @@
                                     data[i].DATE +
                                     "</header>" +
                                     (((data[i].ID).toString() === '') ? '' :
-                                    '<a href="' +
-                                    data[i].LINK +
-                                    '" class="image featured" target=_blank>' +
-                                    '<img src="images/news/' +
-                                    data[i].ID +
-                                    '.jpg" alt="" />' +
-                                    "</a>")
-                                     +
+                                        '<a href="' +
+                                        data[i].LINK +
+                                        '" class="image featured" target=_blank>' +
+                                        '<img src="images/news/' +
+                                        data[i].ID +
+                                        '.jpg" alt="" />' +
+                                        "</a>")
+                                    +
                                     "<p>" +
                                     data[i].DESCRIPTION +
-                                    (((data[i].LINK).toString() === 'NO_BUTTON') ? '' : '<center> <a class="button" href="' + data[i].LINK + '" target=_blank>'+ data[i].BUTTON_TEXT +'</a> ') +
+                                    (((data[i].LINK).toString() === 'NO_BUTTON') ? '' : '<center> <a class="button" href="' + data[i].LINK + '" target=_blank>' + data[i].BUTTON_TEXT + '</a> ') +
                                     "</p>" +
                                     "</article>"
                                 )

@@ -2,12 +2,11 @@
 <html>
 
 <head>
-    <title>SWF </title>
+    <title>SWF</title>
     <link rel="icon" href="images/favicon.ico">
-    <!-- <link rel="icon" href="images/favicon.png"> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L9XEBTBVZ"></script>
     <script>
@@ -25,22 +24,29 @@
         <header id="header">
             <div class="logo container">
                 <div>
-                    <h2><a href="index.html" id="logo"></a>SWF</h2>
-
+                    <h2><a href="/index.html" id="logo"></a>Education</h2>
                 </div>
             </div>
         </header>
-
-
         <nav id="nav">
             <ul>
-                <li> <a href="index">Home</a></li>
-                <li> <a href="people">People</a> </li>
-				<li> <a href="research">Research</a></li>
-                <li> <a href="education">Education</a></li>
-                <li> <a href="news">News</a> </li>
-				<li> <a href="survey">Survey</a> </li>
-
+                <li><a href="/index">Home</a></li>
+                <li><a href="/people">People</a></li>
+                <li> <a href="/research">Research</a> </li>
+                <li>
+                    <a href="/education">Education</a>
+                    <ul>
+                        <li>
+                            <a href="/education/super-soaker-water-academy">Super Soaker Water Academy</a>
+                        </li>
+                        <li>
+                            <a href="/education/climate-adaptation-science-academy">Climate Adaptation Science
+                                Academy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news">News</a></li>
+                <li> <a href="survey">Survey</a> </li>
                 <!-- <li> <a href="partners">Partners</a> </li> -->
             </ul>
         </nav>
@@ -50,12 +56,36 @@
             <div class="container">
                 <div class="row gtr-200">
                     <div class="col-12">
-                        <section id="people">
+                        <section class="box post">
+                            <article class="box post">
+
+                                <!-- <h2 class="major2"><span>Education</span></h2> -->
+                                <header style="margin-top: -1em;">
+                                    <h3>
+                                        Secure Water Future's: Super Soaker Water Academy
+                                    </h3>
+                                    <i>July 25th - July 29th, 2022</i>
+                                </header>
+                                <p>This is a
+                                    week-long program that will teach students all about water and how it is stored and
+                                    used
+                                    in California. By the end of the week, students will have participated in water
+                                    activities to teach them the relationship between water, agriculture, climate
+                                    change,
+                                    and how we can use technology to help our water systems.
+                                    <br>
+                                    <center><a class="button"
+                                            href="https://calteach.ucmerced.edu/bobcat-summer-stem-academy"
+                                            target=_blank>Learn More and Sign Up</a></center>
+
+                                </p>
+                            </article>
                         </section>
-                        <img style="width:100%;" src="images/logos.png" alt="" />
+                        <img style="width:100%;" src="/images/logos.png" alt="" />
                     </div>
                 </div>
             </div>
+
         </section>
     </div>
 
@@ -104,50 +134,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js//participant.js"></script>
-    <script>
-        $(function () {
-
-            $.get("/people.csv").then(function (text, status, xhr) {
-                var data = $.csv.toObjects(text);
-
-                for (var i = 0; i < data.length; i++) {
-
-                    switch (data[i].ID) {
-                        case "HEADER":
-                            $("#people").append(
-                                $.parseHTML(
-                                    '<section class="box highlight"><h2 class="major2">' +
-                                    '<span>' + data[i].LNAME + '</span></h2><div class="row">'
-                                )
-                            );
-                            break;
-                        default:
-                            $("#people").append(
-                                $.parseHTML(
-                                    // '<a id =' + data[i].ID + '>'+
-                                    '<div style="display:inline-block;width:20%;height:25em;padding:4px;vertical-align:top;">' +
-                                    '<section class="box feature">' +
-                                    '<a class="image featured"><img' +
-                                    ' src="images/participants/' + data[i].ID + '.jpg" alt="" /></a>' +
-                                    '<h2>' + data[i].FNAME + ' ' + data[i].LNAME + '</h2>' +
-                                    // '<h5>' + data[i].ROLE + '</h5>' +
-                                    '<h5>' + data[i].INSTITUTION + '</h5>' +
-                                    '</section>' +
-                                    '</div>'
-                                    // + '</a>'
-                                )
-                            );
-                            break;
-                    }
-                }
-                $("#people").append(
-                    $.parseHTML(
-                        '</section>'
-                    )
-                );
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -3092,6 +3092,7 @@ body {
 	}
 
 	#navPanel nav {
+		width: 101%;
 		position: relative;
 		z-index: 1000;
 	}

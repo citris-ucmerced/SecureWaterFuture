@@ -22,34 +22,14 @@
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 		<!-- Header -->
-		<header id="header">
+		<!-- <header id="header">
 			<div class="logo container">
 				<div>
 					<h2><a href="index.html" id="logo"></a>SWF</h2>
 				</div>
 			</div>
-		</header>
-		<nav id="nav">
-			<ul>
-				<li> <a href="index">Home</a></li>
-				<li> <a href="people">People</a> </li>
-				<li> <a href="research">Research</a> </li>
-				<li>
-					<a href="/education">Education</a>
-					<ul>
-						<li>
-							<a href="/education/super-soaker-water-academy">Super Soaker Water Academy</a>
-						</li>
-						<li>
-							<a href="/education/climate-adaptation-science-academy">Climate Adaptation Science
-								Academy</a>
-						</li>
-					</ul>
-				</li>
-				<li> <a href="news">News</a> </li>
-				<li> <a href="survey">Survey</a> </li>
-			</ul>
-		</nav>
+		</header> -->
+		<nav id="nav"></nav>
 
 		<!-- Main -->
 		<section id="main">
@@ -67,7 +47,7 @@
 						</p>
 						<p>Your participation will help us better understand your needs and produce more relevant
 							project outcomes. Please click the link below to make your voice heard and have a chance of
-							winning a Cabela’s gift card:</p>
+							winning a Cabela's gift card:</p>
 
 						<div style="text-align: center;">
 							<a target=_blank href="https://ucmerced.az1.qualtrics.com/jfe/form/SV_6GybnPZzGKIY73M"
@@ -88,39 +68,7 @@
 
 
 	<!-- Footer -->
-	<footer id="footer">
-		<div class="container">
-			<div class="row gtr-200">
-				<div class="col-12">
-					<section id="contact">
-						<h2 class="major"><span>Contact us</span></h2>
-						<p>
-							PI: Joshua Viers <br>
-							<a href="mailto::citris@ucmerced.edu">citris@ucmerced.edu</a>
-							<br>
-							University of California, Merced<br>
-						</p>
-
-						<p>
-							Program Coordinator: Sarah Naumes <br>
-							<a href="mailto::snaumes@ucmerced.edu">snaumes@ucmerced.edu</a>
-							<br>
-							University of California, Merced<br>
-						</p>
-
-					</section>
-				</div>
-			</div>
-		</div>
-
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul class="menu">
-				<li>&copy; 2021; CITRIS & Banatao Institute; All rights reserved</li>
-			</ul>
-		</div>
-		</div>
-	</footer>
+	<footer id="footer"></footer>
 
 	</div>
 
@@ -133,6 +81,12 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$(function(){
+			$("#nav").load("includes/nav.html");
+			$("#footer").load("includes/footer.html");
+		});
+	</script>
 
 </body>
 

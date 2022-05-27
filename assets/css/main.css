@@ -2550,7 +2550,6 @@ h2.major2 {
 	background: #fff;
 	position: relative;
 	display: inline-block;
-	padding: 0 1.5em 0 1.5em;
 	top: -0.65em;
 }
 
@@ -2782,7 +2781,7 @@ body {
 	border-bottom: solid 5px #4D82B7;
 	border-top-width: 35px;
 	border-bottom-width: 10px;
-	padding: 4em 0 4em 0;
+	padding: 0 0 4em 0;
 }
 
 /* Sidebar + Content */

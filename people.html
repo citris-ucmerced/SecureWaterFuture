@@ -89,16 +89,16 @@
                             $("#people").append(
                                 $.parseHTML(
                                     // '<a id =' + data[i].ID + '>'+
-                                    '<div style="display:inline-block;width:20%;height:25em;padding:4px;vertical-align:top;">' +
+                                    '<div style="display:inline-block;width:16.6%;height:25em;padding:4px;vertical-align:top;">' +
                                     '<section class="box feature">' +
                                     '<a class="image featured"><img' +
                                     ' src="images/participants/' + data[i].ID + '.jpg" alt="" /></a>' +
                                     '<h2>' + data[i].FNAME + ' ' + data[i].LNAME + '</h2>' +
                                     // '<h5>' + data[i].ROLE + '</h5>' +
-                                    '<h5>' + data[i].INSTITUTION + '</h5>' +
+                                    '<h6>' + data[i].INSTITUTION + '</h6>' +
                                     '</section>' +
                                     '</div>'
-                                    // + '</a>'
+                                    // + '</a>'  
                                 )
                             );
                             break;

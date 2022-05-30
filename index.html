@@ -191,8 +191,8 @@
 	<script>
 		var lines = "";
 		var line_image = [];
-		var line_text = [];
-		var line_link = [];
+		// var line_text = [];
+		// var line_link = [];
 		var slide_count = 0;
 		$.get(
 			"images/banners/items.txt",
@@ -200,8 +200,8 @@
 				lines = data.split("\n");
 				for (var i = 0; i < lines.length; i++) {
 					line_image[i] = lines[i].split(";")[0];
-					line_text[i] = lines[i].split(";")[1];
-					line_link[i] = lines[i].split(";")[2];
+					// line_text[i] = lines[i].split(";")[1];
+					// line_link[i] = lines[i].split(";")[2];
 				}
 				setInterval(function () {
 					document.getElementById("banner-wrapper").style.backgroundImage =

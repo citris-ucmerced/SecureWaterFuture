@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/cards.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L9XEBTBVZ"></script>
     <script>
@@ -39,8 +40,10 @@
                     <div class="col-12">
                         <h2 class="major2"><span>News</span></h2>
                         <br>
-                        <section id="news">
-                        </section>
+                        <div class="content-wrapper">
+                            <section id="news">
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,40 +77,57 @@
                         default:
                             $("#news").append(
                                 $.parseHTML(
-                                    '<article class="box post">' +
-                                    "<header>" +
-                                    "<h3>" +
-                                    '<a href="' +
-                                    data[i].LINK +
-                                    '" target=_blank>' +
-                                    data[i].TITLE +
-                                    "</a>" +
-                                    "</h3>" +
-                                    data[i].DATE +
-                                    "</header>" +
-                                    (((data[i].ID).toString() === '') ? '' :
-                                        '<center> <a href="' +
-                                        data[i].LINK +
-                                        '" class="image featured" style="width:50%;" target=_blank>' +
-                                        '<img src="images/news/' +
-                                        data[i].ID +
-                                        '.jpg" style=display:block;margin-left:auto;margin-right:auto;width:' + data[i].IMAGESIZE + '%; alt="" />' +
-                                        "</a> </center>")
-                                    +
-                                    "<p>" +
-                                    data[i].DESCRIPTION +
-                                    (((data[i].LINK).toString() === 'NO_BUTTON') ? '' : '<center> <a class="button" href="' + data[i].LINK + '" target=_blank>' + data[i].BUTTON_TEXT + '</a> ') +
-                                    "</p>" +
-                                    "</article>" +
-                                    '<hr style="height:4px; width:100%; border-width:0; color:rgba(77, 130, 183, 1); background-color:rgba(77, 130, 183, 1)">'
+                                        '<div class="news-card">' +
+                                            '<a href="'+ data[i].LINK+'" target="_blank" class="news-card__card-link"></a>' + 
+                                            (((data[i].ID).toString() === '') ? '<img src="images/news/defaultnewspic.jpeg" alt="" class="news-card__image">' :
+                                            '<img src="images/news/' + data[i].ID + '.jpg" alt="" class="news-card__image">') + 
+                                            '<div class="news-card__text-wrapper">' + 
+                                                '<h2 class="news-card__title">' + data[i].TITLE + '</h2>' +
+                                                '<div class="news-card__post-date">' + data[i].DATE + '</div>' +
+                                                '<div class="news-card__details-wrapper">' +
+                                                '<p class="news-card__excerpt">' + data[i].DESCRIPTION.substr(0, 350) + '&hellip;</p>' + 
+                                                '<a href="' + data[i].LINK + '" target="_blank" class="news-card__read-more">' + data[i].BUTTON_TEXT + ' <i class="fas fa-long-arrow-alt-right"></i></a>' + 
+                                                '</div>' + 
+                                            '</div>' + 
+                                        '</div>' + 
+                                        '<br>'
+
+                                    // '<article class="box post">' +
+                                    // "<header>" +
+                                    // "<h3>" +
+                                    // '<a href="' +
+                                    // data[i].LINK +
+                                    // '" target=_blank>' +
+                                    // data[i].TITLE +
+                                    // "</a>" +
+                                    // "</h3>" +
+                                    // data[i].DATE +
+                                    // "</header>" +
+                                    // (((data[i].ID).toString() === '') ? '' :
+                                    //     '<center> <a href="' +
+                                    //     data[i].LINK +
+                                    //     '" class="image featured" style="width:50%;" target=_blank>' +
+                                    //     '<img src="images/news/' +
+                                    //     data[i].ID +
+                                    //     '.jpg" style=display:block;margin-left:auto;margin-right:auto;width:' + data[i].IMAGESIZE + '%; alt="" />' +
+                                    //     "</a> </center>")
+                                    // +
+                                    // "<p>" +
+                                    // data[i].DESCRIPTION +
+                                    // (((data[i].LINK).toString() === 'NO_BUTTON') ? '' : '<center> <a class="button" href="' + data[i].LINK + '" target=_blank>' + data[i].BUTTON_TEXT + '</a> ') +
+                                    // "</p>" +
+                                    // "</article>" +
+                                    // '<hr style="height:4px; width:100%; border-width:0; color:rgba(77, 130, 183, 1); background-color:rgba(77, 130, 183, 1)">'
                                 )
                             );
+                            console.log(data[i].DESCRIPTION.length);
                             break;
                     }
                 }
             });
         });
     </script>
+
 </body>
 
 </html>

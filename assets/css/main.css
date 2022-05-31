@@ -175,7 +175,7 @@ body {
 	background: #f2f5f3;
 }
 
-body.is-preload *,
+/* body.is-preload *,
 body.is-preload *:before,
 body.is-preload *:after {
 	-moz-animation: none !important;
@@ -186,7 +186,7 @@ body.is-preload *:after {
 	-webkit-transition: none !important;
 	-ms-transition: none !important;
 	transition: none !important;
-}
+} */
 
 body,
 input,
@@ -3433,3 +3433,5 @@ body {
 	}
 
 }
+
+

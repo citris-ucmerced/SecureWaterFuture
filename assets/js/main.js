@@ -5,6 +5,14 @@
 */
 
 (function($) {
+	/* Demo purposes only */
+	$(".hover").mouseleave(
+		function () {
+		$(this).removeClass("hover");
+		}
+	);
+	
+
 
 	var	$window = $(window),
 		$body = $('body'),

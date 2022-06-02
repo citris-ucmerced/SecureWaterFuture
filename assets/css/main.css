@@ -1,6 +1,8 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 
+@import url('https://fontlibrary.org//face/pt-sans');
+
 /*
 	TXT by HTML5 UP
 	html5up.net | @ajlkn
@@ -192,7 +194,7 @@ body,
 input,
 textarea,
 select {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	font-weight: 400;
 	color: #6b7770;
 	font-size: 13pt;
@@ -203,12 +205,19 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+	font-family: 'PTSansCaptionBold', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #6b7770;
+	margin: 0 0 0.5em 0;
+	line-height: 1.3;
+}
 h6 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	color: #6b7770;
+	color: #6b7770a6;
 	margin: 0 0 0.5em 0;
 	line-height: 1.3;
 }
@@ -260,12 +269,14 @@ a:hover {
 
 b,
 strong {
+	font-family: 'PTSansBold';
 	font-weight: 700;
 	color: #6b7770;
 }
 
 i,
 em {
+	font-family: 'PTSansItalic';
 	font-style: italic;
 }
 
@@ -348,7 +359,7 @@ table.research th {
 	border: 3px solid;
 	border-bottom: 1px solid;
 
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	/* font-weight: 1000; */
 	font-size: 150%;
 	margin: 0 0 0.5em 0;
@@ -2071,7 +2082,7 @@ button,
 .button {
 	-webkit-appearance: none;
 	display: inline-block;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansCaption', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -2378,7 +2389,7 @@ ul.menu li:first-child {
 form label {
 	display: block;
 	margin: 0 0 1em 0;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #6b7770;
@@ -2463,7 +2474,7 @@ table.default th {
 	text-align: left;
 	padding: 0.5em 1em 0.5em 1em;
 	margin: 0 0 1em 0;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #6b7770;
@@ -2543,9 +2554,9 @@ table.default thead {
 h2.major2 {
 	text-align: center;
 	position: relative;
-	border-top: solid 5px #e7eae8;
+	border-top: solid 5px #86B148;
 	padding: 10px;
-	border-bottom: solid 5px #e7eae8;
+	border-bottom: solid 5px #86B148;
 	font-size: 300%;
 }
 
@@ -2606,7 +2617,7 @@ h2.major2 {
 #header {
 	text-align: center;
 	font-size: 2em;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	padding: 2em 0;
@@ -2650,13 +2661,13 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	background-color: rgba(255, 255, 255, 0.95);
+	background-color: white;
 	background-image: url("images/overlay.png");
 	width: 100%;
 	height: 3.25em;
 	line-height: 3.25em;
 	text-align: center;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansBold', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	cursor: default;
@@ -2707,13 +2718,13 @@ body {
 
 #nav li:hover a,
 #nav li:hover span {
-	background: #C1CAC5;
+	background: #2E67B1 ;
 	color: #fff;
 }
 
 #nav li.active a,
 #nav li.active span {
-	background: #C1CAC5;
+	background: #2E67B1 ;
 	color: #fff;
 }
 
@@ -2723,12 +2734,12 @@ body {
 }
 
 .dropotron {
-	background: #6B7770;
+	background: #2E67B1 ;
 	color: #fff;
 	border-radius: 6px;
 	line-height: 2.75em;
 	text-align: center;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	padding: 1em 0;
@@ -2748,14 +2759,14 @@ body {
 
 .dropotron li:hover>a,
 .dropotron li:hover>span {
-	color: #fff;
-	background: #7B8780;
+	color: #B1D77A;
+	/* background: #0E4FA3; */
 }
 
 .dropotron li.active>a,
 .dropotron li.active>span {
-	color: #fff;
-	background: #7B8780;
+	color: #B1D77A;
+	/* background: #0E4FA3; */
 }
 
 .dropotron li:first-child {
@@ -2773,7 +2784,7 @@ body {
 	left: 50%;
 	margin-left: -1em;
 	top: -0.65em;
-	border-bottom: solid 1em #6B7770;
+	border-bottom: solid 1em #2E67B1;
 	border-left: solid 1em transparent;
 	border-right: solid 1em transparent;
 }
@@ -2818,7 +2829,7 @@ body {
 
 #banner p {
 	display: block;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'PTSansRegular', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #575d59;
@@ -3097,14 +3108,14 @@ body {
 		top: 0;
 		width: 100%;
 		z-index: 10001;
-		background-color: rgba(21, 38, 23, 0.8);
+		background-color: #2E67B1;
 		background-image: url("images/overlay.png");
 	}
 
 	#titleBar .title {
 		display: block;
 		position: relative;
-		font-family: 'Open Sans Condensed', sans-serif;
+		font-family: 'Tisa ', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 1.25em;
@@ -3143,7 +3154,7 @@ body {
 		position: absolute;
 		left: 0;
 		top: 0;
-		background: #b1ddab;
+		background: #2E67B1;
 		width: 44px;
 		height: 44px;
 		content: '\f0c9';
@@ -3153,9 +3164,9 @@ body {
 		font-size: 20px;
 	}
 
-	#titleBar .toggle:active:before {
-		background-color: #a1cd9b;
-	}
+	/* #titleBar .toggle:active:before {
+		background-color: #628D24;
+	} */
 
 	#navPanel {
 		-moz-backface-visibility: hidden;
@@ -3178,14 +3189,14 @@ body {
 		top: 0;
 		width: 275px;
 		z-index: 10002;
-		background-color: #353c37;
+		background-color: #2E67B1;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 		background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 		background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
-		font-family: 'Open Sans Condensed', sans-serif;
+		font-family: 'PTSansRegular', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 1.25em;
@@ -3241,7 +3252,11 @@ body {
 	}
 
 	#navPanel .depth-0 {
-		color: #fff;
+		color: #fff ;
+	}
+	#navPanel .depth-1 {
+		color: #fff ;
+		opacity: .4;
 	}
 
 	body.navPanel-visible #page-wrapper {

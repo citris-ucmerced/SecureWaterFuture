@@ -358,6 +358,7 @@ table.research th {
 	padding-right: 1em;
 	border: 3px solid;
 	border-bottom: 1px solid;
+	width:50%;
 
 	font-family: 'PTSansRegular', sans-serif;
 	/* font-weight: 1000; */

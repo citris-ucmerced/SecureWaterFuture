@@ -2064,6 +2064,7 @@ table.research td:last-child {
 
 img.photo {
 	width: 210px;
+	height: 210px;
 	margin-left: 10px;
 	margin-bottom: 10px;
 	border: 1px solid #666;

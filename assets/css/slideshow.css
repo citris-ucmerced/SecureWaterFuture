@@ -286,3 +286,30 @@
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     padding-top: 0.5em;
   }
+
+  @media screen and (max-width: 736px) {
+
+    h1{
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      z-index: 99;
+      text-align: center;
+      font-family: 'PTSansCaptionRegular', sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      background-color: rgba(21, 28, 23, 0.7);
+      color: #fff;
+      box-shadow: 0 1em 2em -1em rgb(0 0 0 / 50%);
+      width: 101%;
+      line-height: 2;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 50vw;
+      overflow: hidden;
+    }
+  }

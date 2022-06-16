@@ -89,7 +89,8 @@
                             $("#people").append(
                                 $.parseHTML(
                                     // '<a id =' + data[i].ID + '>'+
-                                    '<div style="display:inline-block;width:20%;height:25em;padding:4px;vertical-align:top;">' +
+                                    ((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:25em;padding:4px;vertical-align:top;">' :
+                                    '<div style="display:inline-block;width:20%;height:25em;padding:4px;vertical-align:top;">') +
                                     '<section class="box feature">' +
                                     '<a class="image featured img-overlay"><img' +
                                     ' src="images/participants/' + data[i].ID + '.jpg" alt="" />' + 

@@ -3159,7 +3159,19 @@ body {
 	/* Main */
 
 	#main {
-		border-top-width: 0;
+		border-top-width: 1;
+		width: 101%;
+	}
+
+	/* Twitter */
+	.panel-heading {
+		margin: auto;
+		width: 100%;
+		background-color: #4D82B7;
+		color: #4D82B7;
+	}
+	.twitter-timeline {
+		width: 100%;
 	}
 
 	/* Sidebar */
@@ -3205,7 +3217,7 @@ body {
 		left: 0;
 		position: fixed;
 		top: 0;
-		width: 100%;
+		width: 101%;
 		z-index: 10001;
 		background-color: #2E67B1;
 		background-image: url("images/overlay.png");
@@ -3318,8 +3330,8 @@ body {
 		padding: 0 1em 0 1em;
 		color: #888;
 		color: rgba(255, 255, 255, 0.5);
-		border-top: solid 2px rgba(87, 93, 89, 0.15);
-		font-size: 0.8em;
+		/* border-top: solid 2px rgba(87, 93, 89, 0.15); */
+		font-size: 0.7em;
 	}
 
 	#navPanel .link:first-child {
@@ -3506,7 +3518,7 @@ body {
 	/* Main */
 
 	#main {
-		padding: 3em 0;
+		padding: 1em 0;
 	}
 
 	/* Sidebar */

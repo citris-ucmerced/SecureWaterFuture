@@ -3284,10 +3284,10 @@ body {
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
 		backface-visibility: hidden;
-		-moz-transform: translateX(-300px);
-		-webkit-transform: translateX(-300px);
-		-ms-transform: translateX(-300px);
-		transform: translateX(-300px);
+		-moz-transform: translateX(-325px);
+		-webkit-transform: translateX(-325px);
+		-ms-transform: translateX(-325px);
+		transform: translateX(-325px);
 		-moz-transition: -moz-transform 0.5s ease;
 		-webkit-transition: -webkit-transform 0.5s ease;
 		-ms-transition: -ms-transform 0.5s ease;
@@ -3298,7 +3298,7 @@ body {
 		overflow-y: auto;
 		position: fixed;
 		top: 0;
-		width: 300px;
+		width: 325px;
 		z-index: 10002;
 		background-color: #2E67B1;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
@@ -3372,17 +3372,17 @@ body {
 	}
 
 	body.navPanel-visible #page-wrapper {
-		-moz-transform: translateX(300px);
-		-webkit-transform: translateX(300px);
-		-ms-transform: translateX(300px);
-		transform: translateX(300px);
+		-moz-transform: translateX(325px);
+		-webkit-transform: translateX(325px);
+		-ms-transform: translateX(325px);
+		transform: translateX(325px);
 	}
 
 	body.navPanel-visible #titleBar {
-		-moz-transform: translateX(300px);
-		-webkit-transform: translateX(300px);
-		-ms-transform: translateX(300px);
-		transform: translateX(300px);
+		-moz-transform: translateX(325px);
+		-webkit-transform: translateX(325px);
+		-ms-transform: translateX(325px);
+		transform: translateX(325px);
 	}
 
 	body.navPanel-visible #navPanel {

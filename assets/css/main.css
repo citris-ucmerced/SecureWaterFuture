@@ -2987,6 +2987,21 @@ body {
 	padding: 4em 0 4em 0;
 }
 
+.footerpleft {
+	float: left; 
+	margin-left: 10%; 
+	width: 40%;
+}
+.footerpright {
+	float: right; 
+	margin-right: 10%; 
+	width: 40%;
+}
+.sponsors-img {
+	padding-bottom: 3em; 
+	width:40%;
+}
+
 #footer a {
 	color: inherit;
 }
@@ -3531,6 +3546,20 @@ body {
 
 	/* Footer */
 
+	.footerpleft {
+		float: none; 
+		margin-left: 0%; 
+		width: 100%;
+	}
+	.footerpright {
+		float: none; 
+		margin-right: 0%; 
+		width: 100%;
+	}
+	.sponsors-img {
+		padding-bottom: 3em; 
+		width:90%;
+	}
 	#footer {
 		padding: 3em 0;
 	}

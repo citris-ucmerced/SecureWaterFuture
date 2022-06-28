@@ -97,7 +97,7 @@
 								climate resilience in agricultural and ecological systems in the Southwestern US.
 							</p>
 							<div style="text-align: center;">
-								<img style="width:60%;" src="images/images/overview.png" alt="" />
+								<img class="homeimg" src="images/images/overview.png" alt="" />
 							</div>
 							<p>
 								Securing a climate-resilient water future rests on decisions informed by climate data coupled 
@@ -107,7 +107,7 @@
 								and political area:
 							</p>
 
-							<ul style="padding-left: 0; display: flex; justify-content: center;">
+							<ul class="testbeds">
 								<span style="color:#628D24">
 									Cache Valley, UT
 								</span>
@@ -156,8 +156,11 @@
 										   SWF live
 										</h3>
 									 </div>
-									 <div class="panel-body">
-										<a class="twitter-timeline" data-height="500" data-width="60%" href="https://twitter.com/USDA_SWF?ref_src=twsrc%5Etfw">Tweets by USDA_SWF</a> 
+									 <div id="twitter" class="panel-body">
+										<script>
+											((window.innerWidth <= 736) ? document.getElementById('twitter').innerHTML += '<a class="twitter-timeline" data-height="500" data-width="100%" href="https://twitter.com/USDA_SWF?ref_src=twsrc%5Etfw">Tweets by USDA_SWF</a>' : 
+											document.getElementById('twitter').innerHTML += '<a class="twitter-timeline" data-height="500" data-width="60%" href="https://twitter.com/USDA_SWF?ref_src=twsrc%5Etfw">Tweets by USDA_SWF</a>');
+										</script>
 									 </div>
 								  </div>
 							   </div>

@@ -80,7 +80,7 @@
                         case "HEADER":
                             $("#people").append(
                                 $.parseHTML(
-                                    '<section class="box highlight"><h2 class="major2">' +
+                                    '<section class="box highlight"><h2 class="major2top">' +
                                     '<span>' + data[i].LNAME + '</span></h2><div class="row">'
                                 )
                             );
@@ -89,7 +89,7 @@
                             $("#people").append(
                                 $.parseHTML(
                                     // '<a id =' + data[i].ID + '>'+
-                                    ((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:25em;padding:4px;vertical-align:top;">' :
+                                    ((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:20em;padding:4px;vertical-align:top;">' :
                                     '<div style="display:inline-block;width:20%;height:25em;padding:4px;vertical-align:top;">') +
                                     '<section class="box feature">' +
                                     '<a class="image featured img-overlay"><img' +

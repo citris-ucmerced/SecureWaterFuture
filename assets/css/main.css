@@ -504,6 +504,11 @@ table.research td:last-child {
 	width:60%;
 }
 
+/* Funding Oppurtunity */
+.holds-the-iframe {
+	background:url(/images/loader.gif) center center no-repeat;
+}
+
 /* Top major2 */
 .major2top {
 	text-align: center;

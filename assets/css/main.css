@@ -519,6 +519,11 @@ table.research td:last-child {
     font-size: 300%;
 }
 
+/* Funding Opp */
+.mobilefix {
+	width: 100%;
+}
+
 /* Twitter Feed */
 .twitter-timeline {
 	max-width: 100%;
@@ -3606,6 +3611,14 @@ body {
 	.twitter-timeline {
 		width: 100%;
 	}
+
+	/* Funding Opp */
+	.mobilefix {
+		justify-content: center;
+		display: flex;
+		width: 95%;
+	}
+
 
 	/* Testbeds */
 

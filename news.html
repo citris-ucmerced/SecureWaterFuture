@@ -72,7 +72,7 @@
         $(function () {
             $.get("/news.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
-                for (var i = data.length - 1; i >= 0; i--) {
+                for (var i = 0; i < data.length; i--) {
                     switch (data[i].ID) {
                         default:
                             $("#news").append(

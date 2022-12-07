@@ -29,9 +29,9 @@
                 </div>
             </div>
         </header> -->
-        
+
         <!-- Navbar -->
-		<nav id="nav"></nav>
+        <nav id="nav"></nav>
 
         <!-- Main -->
         <section id="main">
@@ -51,7 +51,7 @@
     </div>
 
     <!-- Footer -->
-	<footer id="footer"></footer>
+    <footer id="footer"></footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -63,11 +63,11 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js//participant.js"></script>
     <script>
-		$(function(){
-			$("#nav").load("includes/nav.html");
-			$("#footer").load("includes/footer.html");
-		});
-	</script>
+        $(function () {
+            $("#nav").load("includes/nav.html");
+            $("#footer").load("includes/footer.html");
+        });
+    </script>
     <script>
         $(function () {
             $.get("/news.csv").then(function (text, status, xhr) {
@@ -77,20 +77,20 @@
                         default:
                             $("#news").append(
                                 $.parseHTML(
-                                        '<div class="news-card">' +
-                                            '<a href="'+ data[i].LINK+'" target="_blank" class="news-card__card-link"></a>' + 
-                                            (((data[i].ID).toString() === '') ? '<img src="images/news/defaultnewspic.jpeg" alt="" class="news-card__image">' :
-                                            '<img src="images/news/' + data[i].ID + '.jpg" alt="" class="news-card__image">') + 
-                                            '<div class="news-card__text-wrapper">' + 
-                                                '<h2 class="news-card__title">' + data[i].TITLE + '</h2>' +
-                                                '<div class="news-card__post-date">' + data[i].DATE + '</div>' +
-                                                '<div class="news-card__details-wrapper">' +
-                                                '<p class="news-card__excerpt">' + data[i].DESCRIPTION.substr(0, 400) + '&hellip;</p>' + 
-                                                '<a href="' + data[i].LINK + '" target="_blank" class="news-card__read-more">' + data[i].BUTTON_TEXT + ' <i class="fas fa-long-arrow-alt-right"></i></a>' + 
-                                                '</div>' + 
-                                            '</div>' + 
-                                        '</div>' + 
-                                        '<br>'
+                                    '<div class="news-card">' +
+                                    '<a href="' + data[i].LINK + '" target="_blank" class="news-card__card-link"></a>' +
+                                    (((data[i].ID).toString() === '') ? '<img src="images/news/defaultnewspic.jpeg" alt="" class="news-card__image">' :
+                                        '<img src="images/news/' + data[i].ID + '.jpg" alt="" class="news-card__image">') +
+                                    '<div class="news-card__text-wrapper">' +
+                                    '<h2 class="news-card__title">' + data[i].TITLE + '</h2>' +
+                                    '<div class="news-card__post-date">' + data[i].DATE + '</div>' +
+                                    '<div class="news-card__details-wrapper">' +
+                                    '<p class="news-card__excerpt">' + data[i].DESCRIPTION.substr(0, 400) + '&hellip;</p>' +
+                                    '<a href="' + data[i].LINK + '" target="_blank" class="news-card__read-more">' + data[i].BUTTON_TEXT + ' <i class="fas fa-long-arrow-alt-right"></i></a>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<br>'
 
                                     // '<article class="box post">' +
                                     // "<header>" +

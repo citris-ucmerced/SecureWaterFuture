@@ -457,7 +457,7 @@ const Stats = (function Stats() {
     name: "Stats",
     panel: null,
     manager: null,
-    init(pdfjsLib) {},
+    init(pdfjsLib) { },
     enabled: false,
     active: false,
     // Stats specific functions.

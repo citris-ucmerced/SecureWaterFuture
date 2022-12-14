@@ -24,11 +24,13 @@
   padding: 0;
   width: 300px;
 }
+
 #PDFBug .controls {
   background: rgba(238, 238, 238, 1);
   border-bottom: 1px solid rgba(102, 102, 102, 1);
   padding: 3px;
 }
+
 #PDFBug .panels {
   bottom: 0;
   left: 0;
@@ -37,38 +39,47 @@
   right: 0;
   top: 27px;
 }
-#PDFBug .panels > div {
+
+#PDFBug .panels>div {
   padding: 5px;
 }
+
 #PDFBug button.active {
   font-weight: bold;
 }
+
 .debuggerShowText,
 .debuggerHideText:hover {
   background-color: rgba(255, 255, 0, 1);
 }
+
 #PDFBug .stats {
   font-family: courier;
   font-size: 10px;
   white-space: pre;
 }
+
 #PDFBug .stats .title {
   font-weight: bold;
 }
+
 #PDFBug table {
   font-size: 10px;
   white-space: pre;
 }
+
 #PDFBug table.showText {
   border-collapse: collapse;
   text-align: center;
 }
+
 #PDFBug table.showText,
 #PDFBug table.showText tr,
 #PDFBug table.showText td {
   border: 1px solid black;
   padding: 1px;
 }
+
 #PDFBug table.showText td.advance {
   color: grey;
 }

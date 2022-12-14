@@ -24,7 +24,73 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-lightbox/index.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
 </head>
 
 <body class="homepage is-preload">
@@ -49,7 +115,7 @@
                         <section class="box post">
                             <article class="box post">
 
-                                
+
                                 <h2 class="major2top"><span>climate adaptation science academy</span></h2>
                                 <h4>
                                     Immersive Education
@@ -105,124 +171,158 @@
                                     in other states.</p>
                             </article>
                         </section>
-                        <center><section class="box post">
-                            <article class="box post">
-                                <h4>
-                                    Field Logs
-                                </h4>
-                                <div>
-                                    <amp-lightbox id="my-lightbox" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Alvarado_Ana-Grace.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox">
-                                        Ana Grace Alvarado
-                                    </button>
+                        <center>
+                            <section class="box post">
+                                <article class="box post">
+                                    <h4>
+                                        Field Logs
+                                    </h4>
+                                    <div>
+                                        <amp-lightbox id="my-lightbox" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox.close" role="button" tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Alvarado_Ana-Grace.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox">
+                                            Ana Grace Alvarado
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox2" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox2.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Clifton_Britne.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox2">
-                                        Britne Clifton
-                                    </button>
+                                        <amp-lightbox id="my-lightbox2" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox2.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Clifton_Britne.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox2">
+                                            Britne Clifton
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox3" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox3.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Facincani-Dourado_Gustavo.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox3">
-                                        Gustavo Facincani Dourado
-                                    </button>
+                                        <amp-lightbox id="my-lightbox3" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox3.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Facincani-Dourado_Gustavo.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox3">
+                                            Gustavo Facincani Dourado
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox4" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox4.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Galvan_Sabrina.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox4">
-                                        Sabrina Galvan
-                                    </button>
+                                        <amp-lightbox id="my-lightbox4" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox4.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Galvan_Sabrina.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox4">
+                                            Sabrina Galvan
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox5" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox5.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Osorio_Katherine.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox5">
-                                        Katherine Osorio
-                                    </button>
+                                        <amp-lightbox id="my-lightbox5" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox5.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Osorio_Katherine.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox5">
+                                            Katherine Osorio
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox6" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox6.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Preciado_Jorge.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox6">
-                                        Jorge Preciado
-                                    </button>
+                                        <amp-lightbox id="my-lightbox6" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox6.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Preciado_Jorge.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox6">
+                                            Jorge Preciado
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox7" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox7.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Rempel_Jenny.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox7">
-                                        Jenny Rempel
-                                    </button>
+                                        <amp-lightbox id="my-lightbox7" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox7.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Rempel_Jenny.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox7">
+                                            Jenny Rempel
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox8" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox8.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Rodriguez-Flores_Jose.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox8">
-                                        Jose Rodriguez Flores
-                                    </button>
+                                        <amp-lightbox id="my-lightbox8" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox8.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Rodriguez-Flores_Jose.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox8">
+                                            Jose Rodriguez Flores
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox9" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox9.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Sabiston_Liam.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox9">
-                                        Liam Sabiston
-                                    </button>
+                                        <amp-lightbox id="my-lightbox9" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox9.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Sabiston_Liam.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox9">
+                                            Liam Sabiston
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox10" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox10.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Shamma_Tasnim.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
-                                    </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox10">
-                                        Tasnim Shamma
-                                    </button>
+                                        <amp-lightbox id="my-lightbox10" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox10.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Shamma_Tasnim.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox10">
+                                            Tasnim Shamma
+                                        </button>
 
-                                    <amp-lightbox id="my-lightbox11" layout="nodisplay">
-                                    <div class="lightbox" on="tap:my-lightbox11.close" role="button" tabindex="0">
-                                        <iframe id="pdf-js-viewer" src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Waldman_Kira.pdf" title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                        <amp-lightbox id="my-lightbox11" layout="nodisplay">
+                                            <div class="lightbox" on="tap:my-lightbox11.close" role="button"
+                                                tabindex="0">
+                                                <iframe id="pdf-js-viewer"
+                                                    src="../web/viewer.html?file=%2Feducation%2Fflogs%2F2022_Waldman_Kira.pdf"
+                                                    title="webviewer" frameborder="0" width="80%" height="80%"></iframe>
+                                            </div>
+                                        </amp-lightbox>
+                                        <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox11">
+                                            Kira Waldman
+                                        </button>
                                     </div>
-                                    </amp-lightbox>
-                                    <button style="margin-bottom: 5px;" class="button" on="tap:my-lightbox11">
-                                        Kira Waldman
-                                    </button>
-                                </div>
-                            </article>
-                        </section></center>
-                            
-                        </div>
+                                </article>
+                            </section>
+                        </center>
+
                     </div>
                 </div>
             </div>
+    </div>
 
-        </section>
+    </section>
     </div>
 
     <!-- Footer -->
-	<footer id="footer"></footer>
+    <footer id="footer"></footer>
 
     </div>
 
@@ -236,11 +336,11 @@
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js//participant.js"></script>
     <script>
-		$(function(){
-			$("#nav").load("../includes/nav.html");
-			$("#footer").load("../includes/footer.html");
-		});
-	</script>
+        $(function () {
+            $("#nav").load("../includes/nav.html");
+            $("#footer").load("../includes/footer.html");
+        });
+    </script>
 </body>
 
 </html>

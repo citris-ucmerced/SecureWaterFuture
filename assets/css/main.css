@@ -264,7 +264,7 @@ h2.major {
 	border-top: solid 5px #e7eae8;
 	font-size: 1.65em;
 	text-align: center;
-	margin: 0 0 3em 0;
+	margin: 0 0 1em 0;
 	top: 0.775em;
 }
 
@@ -566,6 +566,27 @@ table.research td:last-child {
 }
 
 /* Twitter Feed */
+/* new look */
+h2.major {
+	position: relative;
+	border-top: solid 5px #e7eae8;
+}
+
+	h2.major span {
+		background: #fff;
+		position: relative;
+		display: inline-block;
+	}
+
+h2.major2 {
+	text-align: center;
+	position: relative;
+	border-top: solid 5px #e7eae8;
+	padding: 10px;
+	border-bottom: solid 5px #e7eae8;
+}
+/* only big screen changes for presentation */
+
 .twitter-timeline {
 	max-width: 100%;
 	max-height: 1000px;
@@ -679,7 +700,7 @@ table.research td:last-child {
 
 
 @media screen and (max-width: 1680px) {
-
+	
 	.container {
 		width: 75em;
 	}
@@ -687,7 +708,7 @@ table.research td:last-child {
 }
 
 @media screen and (max-width: 1280px) {
-
+	
 	.container {
 		width: calc(100% - 100px);
 	}
@@ -695,7 +716,7 @@ table.research td:last-child {
 }
 
 @media screen and (max-width: 980px) {
-
+	
 	.container {
 		width: calc(100% - 100px);
 	}
@@ -703,7 +724,9 @@ table.research td:last-child {
 }
 
 @media screen and (max-width: 736px) {
-
+	#twitter.panel-body {
+		width: auto !important;
+	}
 	.container {
 		width: calc(100% - 40px);
 	}
@@ -711,7 +734,9 @@ table.research td:last-child {
 }
 
 @media screen and (max-width: 360px) {
-
+	#twitter.panel-body {
+		width: auto !important;
+	}
 	.container {
 		width: calc(100% - 30px);
 	}
@@ -2841,8 +2866,9 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	background-color: white;
-	background-image: url("images/overlay.png");
+	background-color: white; 
+	/* background-color: rgb(218 169 0);  ucm  bobcat gold color, would have to change the text to white to look better*/
+	/* background-image: url("images/overlay.png"); */  
 	width: 100%;
 	height: 3.25em;
 	line-height: 3.25em;
@@ -3069,7 +3095,7 @@ body {
 
 #footer {
 	text-align: center;
-	padding: 4em 0 4em 0;
+	padding: 2em 0 2em 0;
 }
 
 .footerpleft {
@@ -3085,7 +3111,7 @@ body {
 }
 
 .sponsors-img {
-	padding-bottom: 3em;
+	padding-bottom: 1em;
 	width: 70%;
 }
 
@@ -3094,7 +3120,7 @@ body {
 }
 
 #footer h2.major {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1em 0;
 }
 
 #footer h2.major span {
@@ -3109,7 +3135,7 @@ body {
 	padding: 0.75em 2em 0.75em 2em;
 	border-radius: 8px;
 	color: #8b9790;
-	margin: 4em 0 0 0;
+	margin: 1em 0 0 0;
 }
 
 #copyright a {

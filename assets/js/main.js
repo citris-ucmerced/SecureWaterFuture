@@ -53,7 +53,7 @@
 	// Title Bar.
 	$(
 		'<div id="titleBar">' +
-		'<a href="#navPanel" class="toggle"></a>' +
+		'<a href="#navPanel" class="toggle">Nav</a>' +
 		'<span class="title">' + 'SWF' + '</span>' +
 		'</div>'
 	)

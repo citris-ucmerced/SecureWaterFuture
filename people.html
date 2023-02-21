@@ -71,12 +71,48 @@
     </script>
     <script>
         $(function () {
-
+           
+            
             $.get("/people.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
+                
+                // finds all the headers in the csv file
+                let headers = [];
+                for(let i = 0; i < data.length; i++){
+                    if(data[i].ID == "HEADER"){
+                        headers.push(i);
+                    }
+                }
+                //add the last index because we sort from header to header sections 
+                headers.push(data.length - 1)
 
+                //take the data between 2 headers
+                for(let i = 0; i < headers.length - 1; i++){
+                    let start = headers[i] + 1;
+                    // for first section leave Josh and Sarah as the first two
+                    if(i == 0){
+                        start = 3;
+                    }
+                    let end = headers[i+1];
+                    // sort by last name
+                    for (let j = start; j < end - 1; j++){
+                        let min = data[j].LNAME;
+                        let index = j;
+                        for(let k = j + 1; k < end; k++){
+                            if(data[k].LNAME < min){
+                                min = data[k].LNAME;
+                                index = k;
+                            }
+                        }
+                        let temp = data[index];
+                        data[index] = data[j]
+                        data[j] = temp;
+                    }
+                }
+                
+                
                 for (var i = 0; i < data.length; i++) {
-
+                    let curr = data[i];    
                     switch (data[i].ID) {
                         case "HEADER":
                             $("#people").append(
@@ -93,7 +129,7 @@
                                     ((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:20em;padding:4px;vertical-align:top;">' :
                                         '<div style="display:inline-block;width:20%;height:25em;padding:4px;vertical-align:top;">') +
                                     '<section class="box feature">' +
-                                    '<a class="image featured img-overlay"><img' +
+                                    '<a class="image featured img-overlay" onclick="show('+i+')")><img' +
                                     (((data[i].ID).toString() === '') ? ' src="images/participants/defaultprofile.jpg" alt="" />' :
                                         ' src="images/participants/' + data[i].ID + '.jpg" alt="" />') +
                                     // ' src="images/participants/' + data[i].ID + '.jpg" alt="" />' + 
@@ -111,15 +147,69 @@
                             break;
                     }
                 }
+                
                 $("#people").append(
                     $.parseHTML(
                         '</section>'
                     )
                 );
+                
             });
         });
+        
     </script>
+    <script>
+        //make a default "pop up" card 
+        //on click  pop up the card
+        //have a an x button to close it out 
+        //pressing esc also closes it 
+        //vicelab.ucmerced.edu for reference 
+    
+        
+        function show(index){
+            $.get("/people.csv").then(function (text, status, xhr) {
+                var data = $.csv.toObjects(text);
+                
+                let headers = [];
+                for(let i = 0; i < data.length; i++){
+                    if(data[i].ID == "HEADER"){
+                        headers.push(i);
+                    }
+                }
+                //add the last index because we sort from header to header sections 
+                headers.push(data.length - 1)
 
+                //take the data between 2 headers
+                for(let i = 0; i < headers.length - 1; i++){
+                    let start = headers[i] + 1;
+                    // for first section leave Josh and Sarah as the first two
+                    if(i == 0){
+                        start = 3;
+                    }
+                    let end = headers[i+1];
+                    // sort by last name
+                    for (let j = start; j < end - 1; j++){
+                        let min = data[j].LNAME;
+                        let index = j;
+                        for(let k = j + 1; k < end; k++){
+                            if(data[k].LNAME < min){
+                                min = data[k].LNAME;
+                                index = k;
+                            }
+                        }
+                        let temp = data[index];
+                        data[index] = data[j]
+                        data[j] = temp;
+                    }
+                }
+
+                console.log(data[index])
+            },
+            
+        )}
+       
+        
+    </script>
 
 
 

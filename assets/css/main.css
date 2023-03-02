@@ -3745,3 +3745,58 @@ body {
 	}
 
 }
+
+
+/*Water Hack Challenge Items*/
+.flexWrap{
+	align-items: center;
+	display: flex;
+	max-width: 100%;
+	width: 80vw;
+	gap: 5%;
+	margin: 5%;
+	text-align: justify;
+	text-align-last: center;
+}
+.flexWrapSmall{
+	border: 2px solid #ccc;
+	border-radius: 1rem;
+	align-items: center;
+	display: flex;
+	max-width: 100%;
+	width: 80vw;
+	gap: 50%;
+	margin: 5%;
+	padding: 1%;
+	text-align: justify;
+	text-align-last: center;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+.waterHackimg{
+	width:50%;
+	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-moz-border-radius: 2rem;
+	-ms-border-radius: 2rem;
+	-o-border-radius: 2rem;
+}
+
+.waterHackHeader {
+	text-align: center;
+	position: relative;
+	padding: 10px;
+	font-size: 300%;
+}
+
+.waterHackSubheader{
+	text-align: center;
+	position: relative;
+	padding-top: 0px;
+	padding: 10px;
+	border-bottom: solid 5px #86B148;
+	border-top: solid 5px #86B148;
+}

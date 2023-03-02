@@ -488,13 +488,12 @@ table.research td:last-child {
 
 .text {
 	margin-top: 5%;
-	margin-bottom: 5%;
-	margin-left: 5%;
-	line-height: 1;
+	margin-bottom: 0%;
+	line-height: 1.3;
 	color: white;
 	font-size: 14px;
 	width: 95%;
-	height: 90%;
+	height: 60%;
 	position: absolute;
 	overflow: auto;
 	/* top: 50%;
@@ -547,7 +546,7 @@ table.research td:last-child {
 
 /* Funding Oppurtunity */
 .holds-the-iframe {
-	background: url(/images/loader.gif) center center no-repeat;
+	background: url(/images/loader.gif) center center no-repeat; 
 }
 
 /* Top major2 */

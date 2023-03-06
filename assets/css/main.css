@@ -3750,30 +3750,36 @@ body {
 .flexWrap{
 	align-items: center;
 	display: flex;
+	flex-direction: row;
 	max-width: 100%;
 	width: 80vw;
 	gap: 5%;
 	margin: 5%;
-	text-align: justify;
-	text-align-last: center;
+	justify-content: center;
 }
 .flexWrapSmall{
 	border: 2px solid #ccc;
 	border-radius: 1rem;
 	align-items: center;
 	display: flex;
+	flex-wrap: wrap;
 	max-width: 100%;
 	width: 80vw;
 	gap: 50%;
 	margin: 5%;
 	padding: 1%;
-	text-align: justify;
-	text-align-last: center;
+	justify-content: center;
 	-webkit-border-radius: 1rem;
 	-moz-border-radius: 1rem;
 	-ms-border-radius: 1rem;
 	-o-border-radius: 1rem;
 }
+
+@media (max-width: 800px) {
+	.flexWrap {
+	  flex-direction: column;
+	}
+  }
 
 .waterHackimg{
 	width:50%;

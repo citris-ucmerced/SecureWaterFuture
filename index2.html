@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang = 'en'>
+
+<head>
+	<title>SWF</title>
+	<link rel="icon" href="images/favicon.ico">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- , user-scalable=no -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4L9XEBTBVZ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-4L9XEBTBVZ');
+	</script>
+</head>
+
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+		<!-- Navbar -->
+		<nav id="nav"></nav>
+		</div>
+		<!-- Main -->
+		<section id="main">
+			<div>
+				<div class="body">
+					<div class="swftagline">
+						Data-driven solutions for sustainable agriculture and water conservation
+						<button class = LearnMorebutton>
+							Learn More
+						</button>
+					</div>
+					
+				</div>
+				<!--<div class="upcoming">
+					<h2>Upcoming Events</h2>
+					<img src="/images/images/robot.jpg">
+				</div> -->
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer"></footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.dropotron.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js//participant.js"></script>
+	<script>
+		$(function () {
+			$("#nav").load("includes/nav.html");
+			$("#footer").load("includes/footer.html");
+			$("#slideshow").load("includes/slideshow.html");
+		});
+	</script>
+	<!-- <script>
+		var lines = "";
+		var line_image = [];
+		// var line_text = [];
+		// var line_link = [];
+		var slide_count = 0;
+		$.get(
+			"images/banners/items.txt",
+			function (data) {
+				lines = data.split("\n");
+				for (var i = 0; i < lines.length; i++) {
+					line_image[i] = lines[i].split(";")[0];
+					// line_text[i] = lines[i].split(";")[1];
+					// line_link[i] = lines[i].split(";")[2];
+				}
+				setInterval(function () {
+					document.getElementById("banner-wrapper").style.backgroundImage =
+						"url('assets/css/images/overlay.png'), url('assets/css/images/overlay.png'), url('images/banners/" +
+						line_image[slide_count] +
+						".jpg')";
+					
+					// document.getElementById("banner-title").innerText =
+					// 	line_text[slide_count];
+					// document.getElementById("banner-link").href =
+					// 	line_link[slide_count];
+					slide_count++;
+					if (slide_count >= lines.length) slide_count = 0;
+				}, 5000);
+			},
+			"text"
+		);
+	</script> -->
+
+
+
+</body>
+
+</html>

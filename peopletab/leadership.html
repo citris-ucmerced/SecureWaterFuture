@@ -125,7 +125,7 @@
         $(function () {
            
             
-            $.get("/peopletab/leadership.csv").then(function (text, status, xhr) {
+            $.get("/peopletab/leadershipsheet.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
                 
                 // finds all the headers in the csv file

@@ -44,9 +44,9 @@
                         <section id="people">
                         </section>
                         <div class="flexWrap">
-                            <form action="/peopletab/leadership"><button>Leadership</button></form>
-                            <form action="/peopletab/students"><button>Students</button></form>
-                            <form action="/peopletab/advisoryBoard"><button>Advisory Board</button></form>
+                            <form action="/about/leadership"><button>Leadership</button></form>
+                            <form action="/about/students"><button>Students</button></form>
+                            <form action="/about/advisoryBoard"><button>Advisory Board</button></form>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
         $(function () {
            
             
-            $.get("/peopletab/projectTeamsheet.csv").then(function (text, status, xhr) {
+            $.get("/about/projectTeamsheet.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
                 
                 // finds all the headers in the csv file

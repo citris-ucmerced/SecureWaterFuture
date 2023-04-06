@@ -39,6 +39,9 @@
 	.flexWrap {
 	  flex-direction: column;
 	}
+	.sponsors{
+		flex-direction: row;
+	}
   }
 
 .waterHackimg{

@@ -1,0 +1,122 @@
+/*Water Hack Challenge Items*/
+.flexWrap{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	width: 80vw;
+	max-width: 100%;
+	gap: 5%;
+	margin: 5%;
+	flex-shrink: 0;
+	justify-content: center;
+}
+
+.sponsors{
+    height: 10vh;
+}
+
+.flexWrapSmall{
+	border: 2px solid #ccc;
+	border-radius: 1rem;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+	width: 80vw;
+	gap: 50%;
+	margin: 5%;
+	padding: 1%;
+	justify-content: center;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+    -webkit-box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+}
+
+@media (max-width: 800px) {
+	.flexWrap {
+	  flex-direction: column;
+	}
+  }
+
+.waterHackimg{
+	width:50%;
+	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-moz-border-radius: 2rem;
+	-ms-border-radius: 2rem;
+	-o-border-radius: 2rem;
+}
+
+.waterHackHeader {
+	text-align: center;
+	position: relative;
+	padding: 10px;
+	font-size: 300%;
+}
+
+.waterHackSubheader{
+	text-align: center;
+	position: relative;
+	padding-top: 0px;
+	padding: 10px;
+	border-bottom: solid 5px #86B148;
+	border-top: solid 5px #86B148;
+}
+
+.containerwidth {
+    width: 100%;
+    border: 3px solid #ccc;
+	border-radius: 1rem;
+    padding: 1.4rem;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+}
+
+.toggle,
+.content {
+    font-family: "Poppins", sans-serif;
+}
+
+.toggle {
+    width: 100%;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #111130;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 0;
+}
+.content {
+    position: relative;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 30px;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+}

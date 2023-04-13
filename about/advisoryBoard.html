@@ -122,7 +122,7 @@
             
             $.get("/about/advisoryBoardsheet.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
-                
+                console.log(1);
                 // finds all the headers in the csv file
                 let headers = [];
                 for(let i = 0; i < data.length; i++){
@@ -133,16 +133,15 @@
                 //add the last index because we sort from header to header sections 
                 headers.push(data.length - 1)
 
+
                 //take the data between 2 headers
                 for(let i = 0; i < headers.length - 1; i++){
                     let start = headers[i] + 1;
-                    // for first section leave Josh and Sarah as the first two
-                    if(i == 0){
-                        start = 3;
-                    }
-                    let end = headers[i+1];
+                   
+                    let end = headers[i+1] + 1;
+                    
                     // sort by last name
-                    for (let j = start; j < end - 1; j++){
+                    for (let j = start; j < end; j++){
                         let min = data[j].LNAME;
                         let index = j;
                         for(let k = j + 1; k < end; k++){
@@ -156,6 +155,7 @@
                         data[j] = temp;
                     }
                 }
+                
                 
                 
                 for (var i = 0; i < data.length; i++) {
@@ -194,7 +194,6 @@
                             break;
                     }
                 }
-                
                 
                 $("#people").append(
                     $.parseHTML(

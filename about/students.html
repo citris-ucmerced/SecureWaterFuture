@@ -135,11 +135,14 @@
                 headers.push(data.length - 1)
 
                 //take the data between 2 headers
-                for(let i = 0; i < headers.length - 1; i++){
+                  //take the data between 2 headers
+                  for(let i = 0; i < headers.length - 1; i++){
                     let start = headers[i] + 1;
-                    let end = headers[i+1];
+                   
+                    let end = headers[i+1] + 1;
+                    
                     // sort by last name
-                    for (let j = start; j < end - 1; j++){
+                    for (let j = start; j < end; j++){
                         let min = data[j].LNAME;
                         let index = j;
                         for(let k = j + 1; k < end; k++){

@@ -136,10 +136,7 @@
                 //take the data between 2 headers
                 for(let i = 0; i < headers.length - 1; i++){
                     let start = headers[i] + 1;
-                    // for first section leave Josh and Sarah as the first two
-                    if(i == 0){
-                        start = 3;
-                    }
+                    
                     let end = headers[i+1];
                     // sort by last name
                     for (let j = start; j < end - 1; j++){

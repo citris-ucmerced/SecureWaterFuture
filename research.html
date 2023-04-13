@@ -35,100 +35,19 @@
 
 		<!-- Main -->
 		<section id="main">
-			<div class="container">
-				<div class="row gtr-200">
-					<div class="col-12">
-						<h2 class="major2top">
-							Research
-						</h2>
-						<center>
-							<h2>
-								<br>
-								SWF Researchers and Colleagues Discuss Ways to Secure a Climate-Resilient
-								Water Future for the San Joaquin Valley
-							</h2>
-						</center>
-						<br>
-
-						<table class=research>
-							<tr>
-								<th>
-									Dr. Joshua Viers <br>
-									<h6>Recent Advances in Data Integration to Build Climate
-										Resilience</h6>
-									<iframe src="https://www.youtube.com/embed/It-WplM3MLk" title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowfullscreen></iframe>
-								</th>
-							</tr>
-						</table>
-						<table class=research>
-							<tr>
-								<th>
-									Dr. Ellen Bruno <br>
-									<h6>Potential Benefits of Water Markets as Climate Adaptation
-										Strategy</h6>
-									<iframe src="https://www.youtube.com/embed/DOeK8wc06RQ" title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowfullscreen></iframe>
-								</th>
-							</tr>
-						</table>
-						<table class=research>
-							<tr>
-								<th>
-									Dr. Sarah Kurtz <br>
-									<h6>Climate Mitigation Benefits of Colocation of Energy and
-										Water Systems </h6>
-									<iframe src="https://www.youtube.com/embed/WvWmAA5ZcBE" title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowfullscreen></iframe>
-								</th>
-							</tr>
-						</table>
-						<table class=research>
-							<tr>
-								<th>Dr. Josué Medellín-Azuara <br>
-									<h6>2021 Drought Economic Impacts</h6><br>
-									<iframe src="https://www.youtube.com/embed/I1eLzlr993Y" title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowfullscreen></iframe>
-								</th>
-							</tr>
-						</table>
-						<table class=research>
-							<tr>
-								<th>Dr. Safeeq Khan <br>
-									<h6>Integrated Management of Forests & Groundwater to Mitigate
-										Climate Whiplash </h6>
-									<iframe src="https://www.youtube.com/embed/x-vju3jB3hg" title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowfullscreen></iframe>
-								</th>
-							</tr>
-						</table>
-						<table class=research>
-							<tr>
-								<th>Dr. John Abatzoglou <br>
-									<h6>State of the State for Climate and Drought</h6><br>
-									<iframe src="https://www.youtube.com/embed/0nbb1JOSjQA" title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowfullscreen></iframe>
-								</th>
-							</tr>
-						</table>
-						<br>
-						<hr>
-
+			
+				<div class="research-container">
+					<div class="research-text">
+						<h2>Research</h2>
+						<p>The team’s goal is to understand, enable, and envision water management strategies, empowered through data-enabled decision-making, for agricultural and ecological systems. The transdisciplinary team works with growers, irrigation districts, and ecosystem managers to adopt and adapt climate resilience strategies, train the next generation of transdisciplinary practitioners, and produce an online dashboard for data-driven decision-making.</p>
+					</div>
+					<div class="research-image">
 					</div>
 				</div>
-			</div>
+				<section id="research">
+
+				</section>
+				
 		</section>
 	</div>
 
@@ -154,14 +73,99 @@
 			$("#footer").load("includes/footer.html");
 		});
 	</script>
+	<style>
+        /* Popup container - can be anything you want */
+        .popup {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        
+        /* The actual popup */
+        .popup .popuptext {
+          visibility: hidden;
+          width: 100%;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          position: absolute;
+          z-index: 1;
+          top: 100%;
+          left: 0%;
+        }
+        
+        /* Popup arrow */
+        
+        
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+        }
+        
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+          from {opacity: 0;} 
+          to {opacity: 1;}
+        }
+        
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity:1 ;}
+        }
+        </style>
 	<script>
-
 		$(function () {
-			$("iframe").attr("height", "100%");
-			$("iframe").attr("width", "90%");
-			$("iframe").css("height", "20em");
+			$.get("/research.csv").then(function (text, status, xhr) {
+				var data = $.csv.toObjects(text);
+			
+				for (var i = 0; i < data.length; i++){
+					let curr = data[i];
+					$("#research").append(
+						$.parseHTML(
+							// '<a id =' + data[i].ID + '>'+
+								((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:20em;padding:4px;vertical-align:top;">' :
+									'<div style="display:inline-block;width:20%;height:20em;padding:4px;vertical-align:top;">') +
+								'<section class="box feature">' +
+								'<a class="image featured img-overlay popup"  onclick="myFunction('+i+')")><img' +
+								((true) ? ' src="../images/defaultresearch.jpg" alt="" />' :
+									' src="../images/participants/' + data[i].Name + '.jpg" alt="" />') +
+								// ' src="images/participants/' + data[i].ID + '.jpg" alt="" />' + 
+								(((data[i].URL).toString() === '') ? '' :
+									'<div ><p class="u-custom-scrollbar  text popuptext"  id="myPopup'+i+'">' + data[i].URL + '</p></div>') +
+								'</a>' +
+								'<h3>' + data[i].Type +'</h3>' +
+								// '<h5>' + data[i].ROLE + '</h5>' +
+								'<h6>' + data[i].Name + '</h6>' +
+								'</section>' +
+								'</div>'
+								// + '</a>'  
+						)
+					)
+				}
+				$("#research").append(
+                    $.parseHTML(
+                        '</section>'
+                    )
+                );
+			});
 		});
+
 	</script>
+	 <script>
+        function myFunction(index) {
+			var item = document.getElementById("myPopup"+index);
+			window.open(item.textContent);
+			
+           
+        }
+    </script>
 
 
 </body>

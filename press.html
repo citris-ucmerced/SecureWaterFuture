@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+
+<head>
+    <title>SWF</title>
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- , user-scalable=no -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/cards.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L9XEBTBVZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4L9XEBTBVZ');
+    </script>
+</head>
+
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <!-- <header id="header">
+            <div class="logo container">
+                <div>
+                    <h2><a href="index.html" id="logo"></a>Recent News</h2>
+                </div>
+            </div>
+        </header> -->
+
+        <!-- Navbar -->
+        <nav id="nav"></nav>
+
+        <!-- Main -->
+        <section id="main">
+            <div class="container">
+                <div class="row gtr-200">
+                    <div class="col-12">
+                        <h2 class="major2top"><span>Press</span></h2>
+                        <br>
+                        <div class="content-wrapper">
+                            <section id="news">
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.csv.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js//participant.js"></script>
+    <script>
+        $(function () {
+            $("#nav").load("includes/nav.html");
+            $("#footer").load("includes/footer.html");
+        });
+    </script>
+    <script>
+        $(function () {
+            $.get("/news.csv").then(function (text, status, xhr) {
+                var data = $.csv.toObjects(text);
+                for (var i = 0; i < data.length; i++) {
+                    switch (data[i].ID) {
+                        default:
+                            $("#news").append(
+                                $.parseHTML(
+                                    '<div class="news-card">' +
+                                    '<a href="' + data[i].LINK + '" target="_blank" class="news-card__card-link"></a>' +
+                                    (((data[i].ID).toString() === '') ? '<img src="images/news/defaultnewspic.jpeg" alt="" class="news-card__image">' :
+                                        '<img src="images/news/' + data[i].ID + '.jpg" alt="" class="news-card__image">') +
+                                    '<div class="news-card__text-wrapper">' +
+                                    '<h2 class="news-card__title">' + data[i].TITLE + '</h2>' +
+                                    '<div class="news-card__post-date">' + data[i].DATE + '</div>' +
+                                    '<div class="news-card__details-wrapper">' +
+                                    '<p class="news-card__excerpt">' + data[i].DESCRIPTION.substr(0, 400) + '&hellip;</p>' +
+                                    '<a href="' + data[i].LINK + '" target="_blank" class="news-card__read-more">' + data[i].BUTTON_TEXT + ' <i class="fas fa-long-arrow-alt-right"></i></a>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<br>'
+
+                                    // '<article class="box post">' +
+                                    // "<header>" +
+                                    // "<h3>" +
+                                    // '<a href="' +
+                                    // data[i].LINK +
+                                    // '" target=_blank>' +
+                                    // data[i].TITLE +
+                                    // "</a>" +
+                                    // "</h3>" +
+                                    // data[i].DATE +
+                                    // "</header>" +
+                                    // (((data[i].ID).toString() === '') ? '' :
+                                    //     '<center> <a href="' +
+                                    //     data[i].LINK +
+                                    //     '" class="image featured" style="width:50%;" target=_blank>' +
+                                    //     '<img src="images/news/' +
+                                    //     data[i].ID +
+                                    //     '.jpg" style=display:block;margin-left:auto;margin-right:auto;width:' + data[i].IMAGESIZE + '%; alt="" />' +
+                                    //     "</a> </center>")
+                                    // +
+                                    // "<p>" +
+                                    // data[i].DESCRIPTION +
+                                    // (((data[i].LINK).toString() === 'NO_BUTTON') ? '' : '<center> <a class="button" href="' + data[i].LINK + '" target=_blank>' + data[i].BUTTON_TEXT + '</a> ') +
+                                    // "</p>" +
+                                    // "</article>" +
+                                    // '<hr style="height:4px; width:100%; border-width:0; color:rgba(77, 130, 183, 1); background-color:rgba(77, 130, 183, 1)">'
+                                )
+                            );
+                            break;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

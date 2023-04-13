@@ -122,4 +122,5 @@
     transition: all 300ms;
     -moz-transition: all 300ms;
     -ms-transition: all 300ms;
+    color: black;
 }

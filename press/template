@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>SWF</title>
+	<link rel="icon" href="../images/favicon.ico">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- , user-scalable=no -->
+	<link rel="stylesheet" href="../assets/css/main.css" />
+
+</head>
+
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+       
+       <!-- Nav -->
+        <nav id="nav"></nav>
+        <!-- Main -->
+        <section id="main">
+            <div class="container">
+                <div class="row gtr-200">
+                    <div class="col-12">
+                        <div class="box highlight">
+                            <header>
+                                <h2 class="major2top"><span>News</span></h2>
+                            
+                                <h2>
+                                    Title
+                                </h2>
+                                <p>
+                                    Date
+                                </p>
+
+                            </header>
+                            <p>
+                               content
+                            </p>
+                            <img src="../images/news/swf-convening.jpg" />
+                            <section>
+                                <p>
+
+                                </p>
+                            </section>
+
+                            <hr>
+                           
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/jquery.csv.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js//participant.js"></script>
+    <script>
+		$(function () {
+			$("#nav").load("../includes/nav.html");
+			$("#footer").load("../includes/footer.html");
+		});
+	</script>
+</body>
+
+</html>

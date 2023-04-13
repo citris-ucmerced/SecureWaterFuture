@@ -28,6 +28,16 @@
     background-image: url('../../images/research.jpg');
 }
 
+.parallax3{
+    background-image: url('../../images/banners/swfimage3.jpg');
+}
+
+.parallaxedu{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('../../images/banners/fit-banner.jpg');
+    background-position:center top;
+    width: 100%;
+}
+
 .aboutpagewrapper{
     display: flex;
     flex-direction: column;
@@ -55,6 +65,8 @@
 	flex-direction: row;
 	max-width: 100%;
 	width: 90vw;
+    max-height:18rem;
+    min-height: 18rem;
 	gap: 5%;
 	margin: 5%;
     margin-top: -0.5%;
@@ -68,12 +80,19 @@
 	}
 }
 
+.vertical{
+    flex-direction: column;
+    gap:2rem;
+    justify-content: center;
+}
+
 .small{
     gap: 10%;
 }
 
 .smallaboutimg{
     width:50%;
+    height: 100%;
 	border-radius: 2rem;
 	-webkit-border-radius: 2rem;
 	-moz-border-radius: 2rem;
@@ -95,13 +114,4 @@
 	padding: 1%;
 	justify-content: center;
     flex-direction: row;
-}
-
-.imgbtn{
-    background-image: url('../../images/images/robot.jpg');
-    height: 50vh;
-}
-
-.imgbtn:hover{
-
 }

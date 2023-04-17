@@ -3914,12 +3914,17 @@ body {
 	width: 50%;
 }
 
+.extension-image {
+	background-image: url("/images/Sec_Ross_visit_20220318-28.jpg");
+	background-size: cover;
+	width: 50%;
+}
 
 @media (max-width: 800px) {
 	.research-container {
 	  flex-direction: column;
 	  align-content: center;
-	  gap: 1%;
+	  gap: 2%;
 	}
 	.research-text{
 		height: 50%;
@@ -3929,12 +3934,12 @@ body {
 		height: 50%;
 		width: 100%;
   }
+  	.extension-image{
+		height: 50%;
+		width: 100%;
+	}
 }
-.extension-image {
-	background-image: url("/images/Sec_Ross_visit_20220318-28.jpg");
-	background-size: cover;
-	width: 50%;
-}
+
 
 .footer {
 	margin-top: 2em;

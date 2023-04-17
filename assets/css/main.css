@@ -3894,13 +3894,16 @@ body {
 
 .research-container{
 	display: flex;
+	flex-direction: row;
 	height: 100vh;
+	width:100vw;
+	max-width: 100%;
 	margin-bottom: 5em !important;
 }
 
 .research-text {
-
 	width: 50%;
+	height: 100%;
 	padding: 5%;
 	padding-top: 20%;
 }
@@ -3909,6 +3912,23 @@ body {
 	background-image: url("/images/Sec_Ross_visit_20220318-26.jpg");
 	background-size: cover;
 	width: 50%;
+}
+
+
+@media (max-width: 800px) {
+	.research-container {
+	  flex-direction: column;
+	  align-content: center;
+	  gap: 1rem;
+	}
+	.research-text{
+		height: 50%;
+		width: 100%;
+	}
+	.research-image{
+		height: 50%;
+		width: 100%;
+  }
 }
 .extension-image {
 	background-image: url("/images/Sec_Ross_visit_20220318-28.jpg");

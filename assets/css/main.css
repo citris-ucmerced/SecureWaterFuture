@@ -3919,7 +3919,7 @@ body {
 	.research-container {
 	  flex-direction: column;
 	  align-content: center;
-	  gap: 1rem;
+	  gap: 1%;
 	}
 	.research-text{
 		height: 50%;

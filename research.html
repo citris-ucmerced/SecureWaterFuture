@@ -127,11 +127,28 @@
 			
 				for (var i = 0; i < data.length; i++){
 					let curr = data[i];
+					if(curr.Name == "" || curr.Citation == "" || curr.URL == ""){
+						continue;
+					}
+					var start = curr.Citation.indexOf(").");
+					var end = curr.Citation.indexOf('[');
+					
+					if(start == -1 || end == -1){
+						continue;
+					}
+					console.log(start);
+					console.log(end);
+					
+					var title = curr.Citation.substr(start + 3, end - start - 3);
+					console.log(curr.Citation.charAt(start  + 3));
+					console.log(curr.Citation.charAt(end));
+					console.log(title);
+
 					$("#research").append(
 						$.parseHTML(
 							// '<a id =' + data[i].ID + '>'+
-								((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:20em;padding:4px;vertical-align:top;">' :
-									'<div style="display:inline-block;width:20%;height:20em;padding:4px;vertical-align:top;">') +
+								((window.innerWidth < 550) ? '<div style="display:inline-block;width:50%;height:25em;padding:4px;vertical-align:top;">' :
+									'<div style="display:inline-block;width:25%;height:25em;padding:4px;vertical-align:top;">') +
 								'<section class="box feature">' +
 								'<a class="image featured img-overlay popup"  onclick="myFunction('+i+')")><img' +
 								((true) ? ' src="../images/defaultresearch.jpg" alt="" />' :
@@ -140,9 +157,9 @@
 								(((data[i].URL).toString() === '') ? '' :
 									'<div ><p class="u-custom-scrollbar  text popuptext"  id="myPopup'+i+'">' + data[i].URL + '</p></div>') +
 								'</a>' +
-								'<h3>' + data[i].Type +'</h3>' +
+								'<h6>' + title +'</h6>' +
 								// '<h5>' + data[i].ROLE + '</h5>' +
-								'<h6>' + data[i].Name + '</h6>' +
+								'<h5>' + data[i].Name + '</h5>' +
 								'</section>' +
 								'</div>'
 								// + '</a>'  

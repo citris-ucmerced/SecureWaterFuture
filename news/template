@@ -13,7 +13,7 @@
 <body class="homepage is-preload">
     <div id="page-wrapper">
         <!-- Header -->
-       
+
        <!-- Nav -->
         <nav id="nav"></nav>
         <!-- Main -->
@@ -24,7 +24,7 @@
                         <div class="box highlight">
                             <header>
                                 <h2 class="major2top"><span>News</span></h2>
-                            
+
                                 <h2>
                                     Title
                                 </h2>
@@ -44,7 +44,7 @@
                             </section>
 
                             <hr>
-                           
+
 
                         </div>
                     </div>

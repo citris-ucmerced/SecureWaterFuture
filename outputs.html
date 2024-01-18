@@ -115,6 +115,7 @@
     </noscript>
   </head>
   <body class="homepage is-preload">
+
     <div id="page-wrapper">
       <nav id="nav"></nav>
 
@@ -136,8 +137,35 @@
               </button>
             </form>
             <br /><br />
+            <p><b>SWF Year Report Sepetember 2022 - August 2023:</b></p>
+            <button
+              style="margin-bottom: 5px"
+              class="button"
+              on="tap:year-report2"
+            >
+              Year Two Report
+            </button>
+
+            <amp-lightbox id="year-report2" layout="nodisplay">
+              <div
+                class="lightbox"
+                on="tap:year-report2.close"
+                role="button"
+                tabindex="0"
+              >
+                <iframe
+                  id="pdf-js-viewer-report"
+                  src="../web/viewer.html?file=%2Feducation%2Fflogs%2FSWF_Report_Year_Two.pdf"
+                  title="webviewer"
+                  frameborder="0"
+                  width="80%"
+                  height="80%"
+                ></iframe>
+              </div>
+            </amp-lightbox>
+
             <p><b>CASA ELE Field Logs:</b></p>
-            <center>
+            <!-- <center> -->
               <section class="box post">
                 <article class="box post">
                   <h4>Field Logs</h4>
@@ -419,7 +447,7 @@
                   </div>
                 </article>
               </section>
-            </center>
+            <!-- </center> -->
             <br />
             <p>
               <b
@@ -439,9 +467,9 @@
         </div>
       </section>
     </div>
+    <footer id="footer"></footer>
 
     <!-- Footer -->
-    <footer id="footer"></footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

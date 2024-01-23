@@ -10,6 +10,27 @@
     />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get the hash part of the URL
+        var urlPath = window.location.hash;
+
+        // Check if the hash is "#Year-Report"
+        if (urlPath === "#Year-Report") {
+          // Programmatically click the button with the id 'report-btn'
+          document.getElementById('report-btn').click();
+        }
+      });
+      // var urlPath = window.location.hash
+      // // urlPath = urlPath.split()
+      // console.log(urlPath)
+      // if(urlPath === "#Year-Report"){
+      //   // document.getElementById('report-btn').addEventListener('click', function() {
+      //     document.getElementById('report-btn').click();
+      //     alert("hello")
+      //   // });
+      // }
+    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-4L9XEBTBVZ"
@@ -126,15 +147,17 @@
             <h2>Outputs</h2>
             
             <p><b>SWF Year Report September 2022 - August 2023:</b></p>
-            <button
+
+            <a href="#Year-Report"><button
               style="margin-bottom: 5px"
               class="button"
               on="tap:year-report2"
+              id="report-btn"
             >
               Year Two Report
-            </button>
+            </button></a>
             <br /><br />
-
+            
             <amp-lightbox id="year-report2" layout="nodisplay">
               <div
                 class="lightbox"

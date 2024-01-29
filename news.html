@@ -83,7 +83,7 @@
                                         '<img src="images/news/' + data[i].ID + '.jpg" alt="" class="news-card__image">') +
                                     '<div class="news-card__text-wrapper">' +
                                     '<h2 class="news-card__title">' + data[i].TITLE + '</h2>' +
-                                    '<div class="news-card__post-date">' + data[i].DATE.slice(1, -1) + '</div>' +
+                                    '<div class="news-card__post-date">' + data[i].DATE.slice() + '</div>' +
                                     '<div class="news-card__details-wrapper">' +
                                     '<p class="news-card__excerpt">' + data[i].DESCRIPTION.substr(0, 400) + '&hellip;</p>' +
                                     '<a href="' + data[i].LINK + '" target="_blank" class="news-card__read-more">' + data[i].BUTTON_TEXT + ' <i class="fas fa-long-arrow-alt-right"></i></a>' +

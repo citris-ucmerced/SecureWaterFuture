@@ -42,9 +42,9 @@
                 <section id="people">
                 </section>
                 <div class="flexWrap">
-                    <form action="/about/leadership.html"><button>Leadership</button></form>
-                    <form action="/about/projectTeam.html"><button>Project Team</button></form>
-                    <form action="/about/advisoryBoard.html"><button>Advisory Board</button></form>
+                    <form action="leadership.html"><button>Leadership</button></form>
+                    <form action="projectTeam.html"><button>Project Team</button></form>
+                    <form action="advisoryBoard.html"><button>Advisory Board</button></form>
                 </div>
             </div>
         </section>
@@ -121,7 +121,7 @@
         $(function () {
 
 
-            $.get("/about/studentssheet.csv").then(function (text, status, xhr) {
+            $.get("studentssheet.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
 
                 // finds all the headers in the csv file
@@ -213,6 +213,7 @@
 
 
 
+<script src="../assets/js/path-fix.js"></script>
 </body>
 
 </html>

@@ -3910,13 +3910,13 @@ body {
 }
 
 .research-image {
-	background-image: url("/images/Sec_Ross_visit_20220318-26.jpg");
+	background-image: url("../../images/Sec_Ross_visit_20220318-26.jpg");
 	background-size: cover;
 	width: 50%;
 }
 
 .extension-image {
-	background-image: url("/images/Sec_Ross_visit_20220318-28.jpg");
+	background-image: url("../../images/Sec_Ross_visit_20220318-28.jpg");
 	background-size: cover;
 	width: 50%;
 }

@@ -70,7 +70,7 @@
     </script>
     <script>
         $(function () {
-            $.get("/news.csv").then(function (text, status, xhr) {
+            $.get("news.csv").then(function (text, status, xhr) {
                 var data = $.csv.toObjects(text);
                 for (var i = 0; i < data.length; i++) {
                     switch (data[i].ID) {

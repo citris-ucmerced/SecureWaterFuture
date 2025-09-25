@@ -122,7 +122,7 @@
         </style>
 	<script>
 		$(function () {
-			$.get("/research.csv").then(function (text, status, xhr) {
+			$.get("research.csv").then(function (text, status, xhr) {
 				var data = $.csv.toObjects(text);
 			
 				for (var i = 0; i < data.length; i++){

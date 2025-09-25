@@ -1,5 +1,5 @@
 <nav id="nav">
-  <a href="index.html" class="nav-home">
+  <a href="#" data-page="index" class="nav-home">
     <img
       style="
         position: relative;
@@ -9,67 +9,94 @@
         width: 25px;
       "
       class="image featured nav-logo"
-      src="images/UCM_SWFlogo_CLR.png"
+      data-src="images/UCM_SWFlogo_CLR.png"
     />
   </a>
   <ul>
     <!-- <span class="navbar-logo" style="float: left; font-size: 175%">
-            <a style ="color: #4D82B7; text-decoration: none;"href="index.html" class="nav-home">SWF</a>
+            <a style ="color: #4D82B7; text-decoration: none;" href="#" data-page="index" class="nav-home">SWF</a>
         </span> -->
     <li>
-      <a href="index.html" class="nav-home">Home</a>
+      <a href="#" data-page="index" class="nav-home">Home</a>
     </li>
     <li>
-      <a href="swf.html" class="nav-link">About</a>
+      <a href="#" data-page="swf" class="nav-link">About</a>
       <ul style="list-style: none">
         <li>
-          <a href="swf.html" class="nav-link">What is SWF</a>
+          <a href="#" data-page="swf" class="nav-link">What is SWF</a>
         </li>
         <li>
-          <a href="about/leadership.html" class="nav-sublink">Leadership</a>
+          <a href="#" data-page="about/leadership" class="nav-sublink">Leadership</a>
         </li>
         <li>
-          <a href="about/advisoryBoard.html" class="nav-sublink">Advisory Board</a>
+          <a href="#" data-page="about/advisoryBoard" class="nav-sublink">Advisory Board</a>
         </li>
         <li>
-          <a href="about/projectTeam.html" class="nav-sublink">Project Team</a>
+          <a href="#" data-page="about/projectTeam" class="nav-sublink">Project Team</a>
         </li>
         <li>
-          <a href="about/students.html" class="nav-sublink">Students</a>
+          <a href="#" data-page="about/students" class="nav-sublink">Students</a>
         </li>
       </ul>
     </li>
 
     <li>
-      <a href="research.html" class="nav-link">Our Approach</a>
+      <a href="#" data-page="research" class="nav-link">Our Approach</a>
       <ul style="list-style: none">
         <li>
-          <a href="research.html" class="nav-link">Research</a>
+          <a href="#" data-page="research" class="nav-link">Research</a>
         </li>
         <li>
-          <a href="extension.html" class="nav-link">Extension</a>
+          <a href="#" data-page="extension" class="nav-link">Extension</a>
         </li>
         <li>
-          <a href="education.html" class="nav-link">Education</a>
+          <a href="#" data-page="education" class="nav-link">Education</a>
         </li>
         <li>
-          <a href="outputs.html" class="nav-link">Outputs</a>
+          <a href="#" data-page="outputs" class="nav-link">Outputs</a>
         </li>
         <!-- <li>
-          <a href="swf-report.html" class="nav-link">SWF Year Two Report</a>
+          <a href="#" data-page="swf-report" class="nav-link">SWF Year Two Report</a>
         </li> -->
       </ul>
     </li>
 
     <li>
-      <a href="press.html" class="nav-link">Press</a>
+      <a href="#" data-page="press" class="nav-link">Press</a>
     </li>
     <li>
-      <a href="funding.html" class="nav-link">Funding Opportunities</a>
+      <a href="#" data-page="funding" class="nav-link">Funding Opportunities</a>
     </li>
     <!-- <li>
-            <a href="survey.html" class="nav-link">Survey</a>
+            <a href="#" data-page="survey" class="nav-link">Survey</a>
         </li> -->
   </ul>
 </nav>
-<script class="nav-script" src="assets/js/main.js"></script>
+<script>
+// Fix navigation paths based on current page location
+(function() {
+    var currentPath = window.location.pathname;
+    var isInSubdir = currentPath.includes('/about/') ||
+                     currentPath.includes('/education/') ||
+                     currentPath.includes('/news/') ||
+                     currentPath.includes('/press/');
+    var pathPrefix = isInSubdir ? '../' : '';
+
+    // Fix all navigation links
+    document.querySelectorAll('a[data-page]').forEach(function(link) {
+        var page = link.getAttribute('data-page');
+        link.href = pathPrefix + page + '.html';
+    });
+
+    // Fix logo image
+    var logo = document.querySelector('img.nav-logo');
+    if (logo) {
+        logo.src = pathPrefix + logo.getAttribute('data-src');
+    }
+
+    // Load main.js from correct path
+    var script = document.createElement('script');
+    script.src = pathPrefix + 'assets/js/main.js';
+    document.head.appendChild(script);
+})();
+</script>

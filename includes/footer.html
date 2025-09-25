@@ -1,7 +1,7 @@
 <div class="footer">
 <div class="container">
 
-            <img class="sponsors-img footer-img" src="images/SWF_Partners_Banner.png" alt="" />
+            <img class="sponsors-img footer-img" data-src="images/SWF_Partners_Banner.png" alt="" />
             <section id="contact">
                 <h2 class="major"><span>Contact us</span></h2>
                 <div>
@@ -30,3 +30,20 @@
         <li>&copy Secure Water Future&#8482; 2023</li>
     </ul>
 </div>
+<script>
+// Fix footer image path based on current page location
+(function() {
+    var currentPath = window.location.pathname;
+    var isInSubdir = currentPath.includes('/about/') ||
+                     currentPath.includes('/education/') ||
+                     currentPath.includes('/news/') ||
+                     currentPath.includes('/press/');
+    var pathPrefix = isInSubdir ? '../' : '';
+
+    // Fix footer banner image
+    var footerImg = document.querySelector('img.footer-img');
+    if (footerImg) {
+        footerImg.src = pathPrefix + footerImg.getAttribute('data-src');
+    }
+})();
+</script>
